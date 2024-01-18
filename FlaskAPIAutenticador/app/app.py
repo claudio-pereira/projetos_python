@@ -28,7 +28,7 @@ def login():
             return redirect(url_for('dashboard'))
         else:
             flash('Invalid username or password', 'error')
-    return render_template('FlaskAPIAutenticador/app/templates/login.html', form=form)
+    return render_template('login.html', form=form)
 
 # Rota para dashboard
 @app.route('/dashboard')
