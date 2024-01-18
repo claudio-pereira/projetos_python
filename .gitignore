@@ -164,4 +164,4 @@ cython_debug/
 .dockerignore
 
 #Arquivos do banco.
-*migrations/*
+FlaskAPIAutenticador/migrations/
