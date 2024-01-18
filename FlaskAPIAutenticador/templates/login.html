@@ -6,6 +6,15 @@
     <title>Login</title>
 </head>
 <body>
+    <header>
+       
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
     <h2>Login</h2>
     {% with messages = get_flashed_messages() %}
         {% if messages %}

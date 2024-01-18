@@ -7,13 +7,10 @@
 </head>
 <body>
     <header>
-        <h1>Faça seu Signup ou seu Login</h1>
+        <h1>Bem vindo, {{current_user.username}} ao dashboard</h1>
         <nav>
             <ul>
-                
-                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-             
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
             </ul>
         </nav>
     </header>

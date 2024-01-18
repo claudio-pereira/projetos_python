@@ -1,0 +1,40 @@
+<!-- templates/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Adicione aqui seus links para folhas de estilo, scripts, etc. -->
+</head>
+<body>
+
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <h2>Sign Up</h2>
+        <form method="POST" action="{{ url_for('signup') }}">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }} {{ form.username(size=20) }}<br>
+            {{ form.password.label }} {{ form.password(size=20) }}<br>
+            {{ form.confirm_password.label }} {{ form.confirm_password(size=20) }}<br>
+            {{ form.submit() }}
+        </form>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Adicione aqui seu rodapé -->
+    </footer>
+
+</body>
+</html>
